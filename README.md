@@ -24,6 +24,29 @@ All files, including the Claude Desktop extensions and checksums, are on the
 [release page](https://github.com/radiant803/Windfall3D-App/releases/latest). Older versions are
 under [Releases](https://github.com/radiant803/Windfall3D-App/releases).
 
+## What it costs
+
+**Windfall3D works with the Claude Pro or ChatGPT Plus plan you already have, so it costs nothing
+on top of it.** It is free during the public beta, and your assistant runs on your existing
+subscription. If you don't have one yet, a single $20 Claude Pro or ChatGPT Plus plan covers it.
+
+Other AI CAD agents charge for their own subscription. Their plans for professional use, compared
+on price per month:
+
+| AI CAD agent | Plan | Per month |
+| --- | --- | ---: |
+| AdamCAD | Max (for power users) | $200 |
+| MecAgent | Starter (for individual CAD professionals) | $125 |
+| Zoo Design Studio | Pro (2,500 AI minutes) | $99 |
+| Backflip | Pro (for power users) | $50 |
+| **Windfall3D** | **$20** (if you don't have a subscription) | **$20** |
+| **Windfall3D** | **$0** (works with an existing $20 subscription) | **$0** |
+
+Each competitor's plan for individual professionals or power users, as the vendor labels it, at the
+monthly list price on its pricing page, checked 9 November 2026. Entry plans with smaller AI
+allowances are left out, so the comparison is between agents of similar quality and usage.
+Windfall3D's usage follows your Claude or ChatGPT plan's limits.
+
 ## Why Windows and macOS warn you
 
 Windows SmartScreen says *"Windows protected your PC"*, and macOS says it *cannot check the
