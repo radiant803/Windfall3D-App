@@ -1,0 +1,70 @@
+name: Bug report
+description: Something in Windfall3D does not work as it should.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Windfall3D better. Every report is checked automatically for the details below, then reviewed by a maintainer. A report that is missing something is closed with a note saying what to add; editing it reopens it.
+  - type: input
+    attributes:
+      label: Windfall3D version
+      description: Shown at the bottom of the panel on the right of the app window.
+      placeholder: "0.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple silicon)
+        - Windows 10
+        - Windows 11
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Which assistant?
+      options:
+        - Claude Desktop
+        - Claude Code
+        - ChatGPT desktop app (Work mode)
+        - Another MCP client
+        - Not relevant to this problem
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: What went wrong? Include any message you saw, word for word.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: The steps that lead to the problem, so we can see it too.
+      placeholder: |
+        1. Open Windfall3D
+        2. Ask the assistant for ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: Screenshots help a lot. Please leave out anything private, such as file paths with your name in them.
+  - type: checkboxes
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the existing issues and this is not already reported
+          required: true
+        - label: I am using the latest version of Windfall3D
+          required: true

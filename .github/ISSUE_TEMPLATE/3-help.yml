@@ -1,0 +1,45 @@
+name: Help
+description: You are stuck and the guide and the app's Help did not answer it.
+title: "[Help]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please read the [guide](https://github.com/radiant803/Windfall3D-App#readme) and the Help in the app first; most setup questions are answered there.
+  - type: input
+    attributes:
+      label: Windfall3D version
+      description: Shown at the bottom of the panel on the right of the app window.
+      placeholder: "0.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple silicon)
+        - Windows 10
+        - Windows 11
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What have you tried?
+      description: Including which parts of the guide or Help you followed.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Before you submit
+      options:
+        - label: I read the guide and the Help in the app
+          required: true
+        - label: I am using the latest version of Windfall3D
+          required: true

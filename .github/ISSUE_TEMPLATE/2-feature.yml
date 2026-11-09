@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest something Windfall3D could do.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every request is checked automatically, then reviewed by a maintainer.
+  - type: textarea
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you were trying to do and what got in the way.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Anything else?
+  - type: checkboxes
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the existing issues and this is not already requested
+          required: true
