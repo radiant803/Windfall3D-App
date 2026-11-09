@@ -1,8 +1,14 @@
 # Changelog
 
-## 0.2.1 (November 2026)
+## 0.2.2 (November 2026)
 
 The first public release.
+
+- **Windows:** a proper Start menu entry and an optional desktop shortcut, both with the
+  Windfall3D icon. The running app now groups with them on the taskbar, so it can be pinned. The
+  icon fills its square on Windows, and the installer shows it too.
+
+## 0.2.1 (November 2026)
 
 - **Connect in one click.** Connect buttons in the app add Windfall3D to Claude Desktop, the
   ChatGPT desktop app or Claude Code, backing up their settings first. Remove undoes it.

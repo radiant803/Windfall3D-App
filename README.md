@@ -9,19 +9,46 @@ it is built, with its verdict and every check.
 
 Website: **https://windfall3d.vercel.app**
 
-> **Public beta.** Windfall3D 0.2.1 is open for anyone to download and try. It is a beta: expect rough
-> edges, and please [report what you find](#reporting-a-problem).
+> **Public beta.** Windfall3D 0.2.2 is open for anyone to download and try. It is a beta: expect rough
+> edges, and please [report what you find](#reporting-a-problem). The installers are not code-signed
+> yet, so your computer will ask you to confirm before installing; [here is why](#why-windows-and-macos-warn-you).
 
 ## Download
 
 | Your computer | Download |
 | --- | --- |
-| **Windows 10 or 11** (64-bit) | [Windfall3D-0.2.1-windows-x64-setup.exe](https://github.com/radiant803/Windfall3D-App/releases/download/v0.2.1/Windfall3D-0.2.1-windows-x64-setup.exe) (176 MB) |
-| **Mac with Apple silicon** (M1 or later) | [Windfall3D-0.2.1-macos-arm64.pkg](https://github.com/radiant803/Windfall3D-App/releases/download/v0.2.1/Windfall3D-0.2.1-macos-arm64.pkg) (213 MB) |
+| **Windows 10 or 11** (64-bit) | [Windfall3D-0.2.2-windows-x64-setup.exe](https://github.com/radiant803/Windfall3D-App/releases/download/v0.2.2/Windfall3D-0.2.2-windows-x64-setup.exe) (176 MB) |
+| **Mac with Apple silicon** (M1 or later) | [Windfall3D-0.2.2-macos-arm64.pkg](https://github.com/radiant803/Windfall3D-App/releases/download/v0.2.2/Windfall3D-0.2.2-macos-arm64.pkg) (213 MB) |
 
 All files, including the Claude Desktop extensions and checksums, are on the
 [release page](https://github.com/radiant803/Windfall3D-App/releases/latest). Older versions are
 under [Releases](https://github.com/radiant803/Windfall3D-App/releases).
+
+## Why Windows and macOS warn you
+
+Windows SmartScreen says *"Windows protected your PC"*, and macOS says it *cannot check the
+installer for malicious software*. Both warnings mean the same thing: **the installer is not
+code-signed**. They are about the missing signature, not about anything found in Windfall3D.
+
+Signing needs a paid certificate on each platform: a code-signing certificate from a certificate
+authority for Windows, and a paid Apple Developer Program membership to sign and notarise for
+macOS. Both have to be renewed every year, and for a beta that cost is not feasible yet, so
+Windfall3D is distributed unsigned for now.
+
+What you can check instead:
+
+- **Virus scans.** VirusTotal checked both installers' download links against 93 security
+  vendors, and none flagged them: [Windows installer](https://www.virustotal.com/gui/url/c54d01c8e87cf8e9abc03387130947e132ffd9f0064630174678bf64e90458ad)
+  and [Mac installer](https://www.virustotal.com/gui/url/bf166465708bbcd234d96281ca7c7a41f477d70e1436138ec7301e5cae094339)
+  (0 of 93 each, 9 November 2026).
+- **Checksums.** Every release lists the SHA-256 of each file in `SHA256SUMS.txt`, so you can
+  confirm your download is exactly the file published here ([how](#check-the-download-optional)).
+- **Built and tested automatically.** The Windows installer is built on a clean Windows machine
+  and installed, opened and uninstalled there by automated tests before each release.
+- **It stays on your computer.** Windfall3D runs locally and does not send your models anywhere
+  ([details](#your-data)).
+
+To open it anyway, follow the [install steps](#install) for your computer.
 
 ## What you need
 
@@ -40,9 +67,11 @@ under [Releases](https://github.com/radiant803/Windfall3D-App/releases).
 2. Windows may say **"Windows protected your PC"**, because the beta installer is not yet signed.
    Click **More info**, then **Run anyway**.
 3. Follow the installer. It installs for your user only and does not ask for an administrator
-   password. At the end, leave **Open Windfall3D** ticked.
+   password. Leave **Create a desktop shortcut** ticked if you want one, and at the end leave
+   **Open Windfall3D** ticked.
 
-Windfall3D appears in the Start menu. If a browser tab opens instead of the Windfall3D window, the
+Windfall3D appears in the Start menu (search for *Windfall3D*), where you can pin it to Start or
+the taskbar. If a browser tab opens instead of the Windfall3D window, the
 Microsoft Edge WebView2 Runtime is missing; Windfall3D still works in the browser, and installing
 the runtime from Microsoft gives you the window.
 
@@ -63,8 +92,8 @@ the terminal. The first time you open the app, macOS may take a minute to check 
 
 Each release has a `SHA256SUMS.txt`. Compare it with:
 
-- Mac (Terminal): `shasum -a 256 Windfall3D-0.2.1-macos-arm64.pkg`
-- Windows (PowerShell): `Get-FileHash Windfall3D-0.2.1-windows-x64-setup.exe`
+- Mac (Terminal): `shasum -a 256 Windfall3D-0.2.2-macos-arm64.pkg`
+- Windows (PowerShell): `Get-FileHash Windfall3D-0.2.2-windows-x64-setup.exe`
 
 ## Connect your assistant
 
